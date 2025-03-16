@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using ManuelToleran_MVC_AgileProcess.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ManuelToleran_MVC_AgileProcessContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ManuelToleran_MVC_AgileProcessContext") ?? throw new InvalidOperationException("Connection string 'ManuelToleran_MVC_AgileProcessContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
