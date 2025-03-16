@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ManuelToleran_MVC_AgileProcess.props" />
+</Project>
