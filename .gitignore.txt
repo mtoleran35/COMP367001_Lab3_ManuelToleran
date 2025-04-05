@@ -1,5 +1,0 @@
-.vs/
-
-# Ignore build and object files
-bin/
-obj/
